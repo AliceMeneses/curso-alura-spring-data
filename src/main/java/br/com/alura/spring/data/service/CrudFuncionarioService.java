@@ -36,10 +36,10 @@ public class CrudFuncionarioService {
 		
 		while(system) {
 			System.out.println("0 -> Voltar");
-			System.out.println("1 -> Salvar funcinário");
-			System.out.println("2 -> Atualizar funcinário");
+			System.out.println("1 -> Salvar funcionário");
+			System.out.println("2 -> Atualizar funcionário");
 			System.out.println("3 -> Visualizar funcionários ");
-			System.out.println("4 -> Deletar funcinário");
+			System.out.println("4 -> Deletar funcionário");
 
 			System.out.print("Escolha uma ação: ");
 			action = scanner.nextInt();
@@ -67,16 +67,16 @@ public class CrudFuncionarioService {
 	}
 	
 	public void salvar(Scanner scanner) {
-		System.out.print("Nome do funcinário: ");
+		System.out.print("Nome do funcionário: ");
 		String nome  = scanner.next();
 		
-		System.out.print("CPF do funcinário: ");
+		System.out.print("CPF do funcionário: ");
 		String cpf  = scanner.next();
 		
-		System.out.print("Salário do funcinário: ");
+		System.out.print("Salário do funcionário: ");
 		BigDecimal salario  = scanner.nextBigDecimal();
 		
-		System.out.print("Data de contração do funcinário: ");
+		System.out.print("Data de contração do funcionário: ");
 		String dataContratacao  = scanner.next();
 		
 		System.out.print("Id do cargo do funcionário: ");
@@ -116,7 +116,7 @@ public class CrudFuncionarioService {
 			action = scanner.nextInt();
 			
 			if(action == 1) {
-				System.out.print("Id da unidade de trabalho do funcinário: ");
+				System.out.print("Id da unidade de trabalho do funcionário: ");
 				Integer id  = scanner.nextInt();
 				Optional<UnidadeTrabalho> unidade = unidadeTrabalhoRepository.findById(id);
 				unidades.add(unidade.get());
@@ -129,19 +129,19 @@ public class CrudFuncionarioService {
 	}
 	
 	public void atualizar(Scanner scanner) {
-		System.out.print("Id do funcinário: ");
+		System.out.print("Id do funcionário: ");
 		Integer id  = scanner.nextInt();
 		
-		System.out.print("Nome do funcinário: ");
+		System.out.print("Nome do funcionário: ");
 		String nome  = scanner.next();
 		
-		System.out.print("CPF do funcinário: ");
+		System.out.print("CPF do funcionário: ");
 		String cpf  = scanner.next();
 		
-		System.out.print("Salário do funcinário: ");
+		System.out.print("Salário do funcionário: ");
 		BigDecimal salario  = scanner.nextBigDecimal();
 		
-		System.out.print("Data de contração do funcinário: ");
+		System.out.print("Data de contração do funcionário: ");
 		String dataContratacao  = scanner.next();
 		
 		System.out.print("Id do cargo do funcionário: ");
@@ -169,7 +169,7 @@ public class CrudFuncionarioService {
 	}
 	
 	public void deletar(Scanner scanner) {
-		System.out.print("Id do funcinário: ");
+		System.out.print("Id do funcionário: ");
 		Integer id  = scanner.nextInt();
 		
 		funcionarioRepository.deleteById(id);
