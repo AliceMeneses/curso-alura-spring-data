@@ -13,7 +13,7 @@ public interface FuncionarioRepository extends CrudRepository<Funcionario, Integ
 	
 	List<Funcionario> findByNome(String nome);
 	
-	@Query("Select f Funcionario f where f.nome = :pNome and f.data = :pData f.salario > :pSalario")
+	@Query("Select f from Funcionario f where f.nome = :pNome and f.dataContratacao = :pData and f.salario > :pSalario")
 	List<Funcionario> findNomeDataContratacaoSalarioMaior(String pNome, LocalDate pData, BigDecimal pSalario);
 
 }
