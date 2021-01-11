@@ -25,7 +25,7 @@ public class Funcionario {
 	private Integer id;
 	private String nome;
 	private String cpf;
-	private BigDecimal Salario;
+	private BigDecimal salario;
 	private LocalDate dataContratacao;
 	@ManyToOne
 	@JoinColumn(name = "cargo_id", nullable = false)
@@ -61,11 +61,11 @@ public class Funcionario {
 	}
 
 	public BigDecimal getSalario() {
-		return Salario;
+		return salario;
 	}
 
 	public void setSalario(BigDecimal salario) {
-		Salario = salario;
+		this.salario = salario;
 	}
 
 	public LocalDate getDataContratacao() {
@@ -94,7 +94,7 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", Salario=" + Salario
+		return "Funcionario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", salario=" + salario
 				+ ", dataContratacao=" + dataContratacao + ", cargo=" + cargo + ", unidadeTrabalhos=" + unidadeTrabalhos
 				+ "]";
 	}
