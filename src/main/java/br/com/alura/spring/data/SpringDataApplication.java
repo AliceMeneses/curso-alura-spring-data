@@ -61,6 +61,7 @@ public class SpringDataApplication implements CommandLineRunner {
 				break;
 			case 4:
 				relatoriosService.inicial(scanner);
+				break;
 			default:
 				system = false;
 				break;
