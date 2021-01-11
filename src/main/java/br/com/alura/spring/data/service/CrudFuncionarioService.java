@@ -87,7 +87,7 @@ public class CrudFuncionarioService {
 		funcionario.setCpf(cpf);
 		funcionario.setSalario(salario);
 		
-		LocalDate dataContratacaoFormatada = LocalDate.parse(dataContratacao, DateTimeFormatter.ofPattern("dd/MM/yy"));
+		LocalDate dataContratacaoFormatada = LocalDate.parse(dataContratacao, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 		
 		funcionario.setDataContratacao(dataContratacaoFormatada);
 		
